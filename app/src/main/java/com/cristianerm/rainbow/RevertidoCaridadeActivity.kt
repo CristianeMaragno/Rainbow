@@ -1,11 +1,11 @@
 package com.cristianerm.rainbow
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
+import android.widget.Spinner
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_main_functionalities.*
-import kotlinx.android.synthetic.main.activity_main_functionalities.recyclerView_promotions
 import kotlinx.android.synthetic.main.activity_revertido_caridade.*
 
 class RevertidoCaridadeActivity : AppCompatActivity() {
@@ -25,6 +25,19 @@ class RevertidoCaridadeActivity : AppCompatActivity() {
             layoutManager = LinearLayoutManager(context)
             caridadeRecyclerViewAdapter = CaridadeRecyclerViewAdapter()
             adapter = caridadeRecyclerViewAdapter
+        }
+
+        val spinner: Spinner = findViewById(R.id.caridade_periodo_spinner)
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.filter,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            // Specify the layout to use when the list of choices appears
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            // Apply the adapter to the spinner
+            spinner.adapter = adapter
         }
 
         val list = ArrayList<CaridadeInformation>()

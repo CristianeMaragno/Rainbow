@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Rainbow</string>
+
+    <string-array name="filter">
+        <item>Última semana</item>
+        <item>Último mês</item>
+        <item>Último ano</item>
+    </string-array>
 </resources>
