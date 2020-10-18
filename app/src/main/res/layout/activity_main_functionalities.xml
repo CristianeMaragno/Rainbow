@@ -23,7 +23,9 @@
                 android:layout_height="?attr/actionBarSize"
                 app:title="Best Flight"
                 app:menu="@menu/toolbar_menu"
+                android:backgroundTint="@color/white"
                 app:navigationIcon="@drawable/ic_menu"
+                app:logo="@drawable/logo_test_2"
                 style="@style/Widget.MaterialComponents.Toolbar.Primary"/>
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -33,7 +35,9 @@
             android:clipChildren="false"
             android:clipToPadding="false"
             android:orientation="vertical"
-            android:padding="24dp"
+            android:paddingRight="24dp"
+            android:paddingLeft="24dp"
+            android:paddingBottom="10dp"
             android:paddingTop="16dp">
 
             <LinearLayout
@@ -110,25 +114,66 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/text_destination_destination"
                     android:text="Eu quero..."
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/sign_up_cadastrate_button"
-                    android:layout_width="300dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_marginTop="20dp"
-                    android:text="Fazer transferêrencia" />
+                    android:orientation="horizontal">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/sign_up_cadastrate_button"
-                    android:layout_width="300dp"
+                    <TextView
+                        android:id="@+id/textRecados"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Fazer transferência"
+                        android:textSize="30sp"/>
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="55dp"
+                        android:layout_gravity="center_horizontal"
+                        app:srcCompat="@drawable/ic_chevron"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_marginTop="20dp"
-                    android:text="Pagar Boleto" />
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/textRecados"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Pagar boleto"
+                        android:textSize="30sp"/>
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="145dp"
+                        android:layout_gravity="center_horizontal"
+                        app:srcCompat="@drawable/ic_chevron"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_destination_destination"
+                    android:text="Os benefícios do mês para você..."
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerView_promotions"

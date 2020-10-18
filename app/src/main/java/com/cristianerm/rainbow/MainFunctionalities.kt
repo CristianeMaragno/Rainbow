@@ -23,6 +23,8 @@ class MainFunctionalities : AppCompatActivity(), NavigationView.OnNavigationItem
         setContentView(R.layout.activity_main_functionalities)
 
         setSupportActionBar(app_bar_rainbow_main_functionalities)
+        app_bar_rainbow_main_functionalities.setTitle("")
+        supportActionBar?.elevation = 0f
 
         app_bar_rainbow_main_functionalities.setNavigationOnClickListener {
             drawer_layout.openDrawer(GravityCompat.START)
@@ -61,7 +63,7 @@ class MainFunctionalities : AppCompatActivity(), NavigationView.OnNavigationItem
         list.add(
             PromotionsInformation(
                 "R$10",
-                "Checkup de saúde"
+                "Restaurante"
             )
         )
         list.add(
@@ -72,6 +74,7 @@ class MainFunctionalities : AppCompatActivity(), NavigationView.OnNavigationItem
         )
 
         promotionsRecyclerViewAdapter.submitList(list)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
