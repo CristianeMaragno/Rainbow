@@ -46,7 +46,7 @@ class MainFunctionalities : AppCompatActivity(), NavigationView.OnNavigationItem
         navigationView.setCheckedItem(R.id.nav_main_inicio)
 
         recyclerView_promotions.apply {
-            layoutManager = LinearLayoutManager(context)
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL ,false)
             promotionsRecyclerViewAdapter = PromotionsRecyclerViewAdapter()
             adapter = promotionsRecyclerViewAdapter
         }

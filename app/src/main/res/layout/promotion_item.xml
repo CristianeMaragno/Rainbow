@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView
     android:id="@+id/card_destination"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     app:cardPreventCornerOverlap="true"
@@ -11,51 +11,43 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="195dp"
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="16dp">
-
-            <!--<ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/gol_icon" /> -->
+            android:padding="16dp"
+            android:layout_gravity="center">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginLeft="15dp">
+                android:layout_gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/disconto_value"
                     android:text="R$ 200,00"
+                    android:textSize="20sp"
+                    android:background="@drawable/rounded_textview"
+                    android:gravity="center"
+                    android:padding="15dp"
                     android:textAppearance="?attr/textAppearanceHeadline6"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                    android:id="@+id/disconto_value" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="20dp"
                     android:id="@+id/disconto_event"
                     android:text="Evento ou serviço"
-                    android:layout_marginLeft="25dp"
                     android:textAppearance="?attr/textAppearanceBody2"
                     android:textColor="?android:attr/textColorSecondary"
+                    android:layout_gravity="center"
                     />
 
             </LinearLayout>
