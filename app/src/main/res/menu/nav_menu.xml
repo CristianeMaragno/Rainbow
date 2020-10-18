@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_main_inicio"
+            android:icon="@drawable/ic_home"
+            android:title="Início" />
+        <item
+            android:id="@+id/nav_main_meu_perfil"
+            android:icon="@drawable/ic_person"
+            android:title="Meu Perfil" />
+
+        <item
+            android:id="@+id/nav_main_conta_corrente"
+            android:icon="@drawable/ic_account"
+            android:title="Conta Corrente" />
+
+        <item
+            android:id="@+id/nav_main_pix"
+            android:icon="@drawable/ic_send"
+            android:title="Pix" />
+
+        <item
+            android:id="@+id/nav_main_tranferencias"
+            android:icon="@drawable/ic_attach_money"
+            android:title="Transferências" />
+
+        <item
+            android:id="@+id/nav_main_cartões"
+            android:icon="@drawable/ic_card"
+            android:title="Cartões" />
+
+        <item
+            android:id="@+id/nav_main_agendamentos"
+            android:icon="@drawable/ic_calendar"
+            android:title="Agendamentos" />
+
+        <item
+            android:id="@+id/nav_main_autorizacoes"
+            android:icon="@drawable/ic_settings"
+            android:title="Autorizações" />
+    </group>
+</menu>
